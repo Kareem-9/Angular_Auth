@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "83IyfeNX2QDV71XJSDrOisMw4Xotl4d0or8HoOqxlH8892b5dfjP6Mg57ccaKac84nl4VncM72u3ffyX2vu/fw==",
+  "dgSpecHash": "ap8Ynto/6h9lqIc2KLsXYB283ODAWXZx7JddwvTIlVsECYx0wtAGT93UrBWbudApis5KHZWgs/1JHOC20aY83g==",
   "success": true,
   "projectFilePath": "D:\\Angular_Projects\\Angular_Auth\\AngularAuthAPI\\AngularAuthAPI\\AngularAuthAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kareem.shaik\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\kareem.shaik\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\kareem.shaik\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\kareem.shaik\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\kareem.shaik\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\kareem.shaik\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\kareem.shaik\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

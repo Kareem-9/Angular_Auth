@@ -1,0 +1,54 @@
+{
+  "Employees": [
+    {
+      "id": 3,
+      "name": "Madhu",
+      "company": "Google",
+      "mobile": "7485963205",
+      "email": "madhu@gmail.com",
+      "gender": "female",
+      "location": "Hyd",
+      "dateOfBirth": "1992-03-04T18:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Sravani",
+      "company": "ACS",
+      "mobile": "7412589630",
+      "email": "sravani@gmail.com",
+      "gender": "female",
+      "location": "Tpt",
+      "dateOfBirth": "1992-03-04T18:30:00.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Shoaib",
+      "company": "GGK",
+      "mobile": "7412589630",
+      "email": "shoaib@gmail.com",
+      "gender": "male",
+      "location": "Delhi",
+      "dateOfBirth": "2023-04-03T18:30:00.000Z"
+    },
+    {
+      "id": 9,
+      "name": "Varsha",
+      "company": "Innova",
+      "mobile": "7485963210",
+      "email": "varsha@gmail.com",
+      "gender": "female",
+      "location": "Uppal",
+      "dateOfBirth": "2023-04-06T18:30:00.000Z"
+    },
+    {
+      "id": 10,
+      "name": "Riyaz",
+      "company": "Innova",
+      "mobile": "7410589630",
+      "email": "riyaz@gmail.com",
+      "gender": "male",
+      "location": "Gadwal",
+      "dateOfBirth": "1992-08-11T18:30:00.000Z"
+    }
+  ]
+}

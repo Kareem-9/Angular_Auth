@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import validateForm from 'src/app/helpers/validateform';
 import { AuthService } from 'src/app/services/auth.service';
 import { NgToastService } from 'ng-angular-popup';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-login',
@@ -22,14 +23,21 @@ export class LoginComponent implements OnInit {
      private fb: FormBuilder,
      private auth:AuthService,
      private router:Router,
-     private toast:NgToastService ){}
+     private toast:NgToastService,
+    // private appcomponent:AppComponent
+      ){
+    //   localStorage.clear()
+    // this.appcomponent.ngOnInit()
+     }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       username: ['',Validators.required],
       password:['',Validators.required]
     })
+    
   }
+
 
   hideShowPass(){
     this.isText = !this.isText;
@@ -49,7 +57,8 @@ export class LoginComponent implements OnInit {
           this.loginForm.reset();
           this.auth.storeToken(res.token);  //This one is store the token
           this.toast.success({detail:"SUCCESS", summary:res.message,duration:5000});
-          this.router.navigate(['dashboard'])
+          //localStorage.setItem('login','sucess')
+          this.router.navigate(['layout'])
         },
         error:(err=>{
           alert(err?.error.message)

@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AngularAuthAPI",
+    "\\AngularAuthAPI\\AngularAuthAPI",
+    "\\AngularAuthAPI\\AngularAuthAPI\\Controllers",
+    "\\AngularAuthAPI\\AngularAuthAPI\\Helpers"
+  ],
+  "SelectedNode": "\\AngularAuthAPI\\AngularAuthAPI\\Controllers\\UserController.cs",
+  "PreviewInSolutionExplorer": false
+}

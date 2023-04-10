@@ -23,8 +23,5 @@ ngOnIit(){
     this.users = res;
   })
 }
-
-  logout(){
-    this.auth.signOut();
-  }
+ 
 }

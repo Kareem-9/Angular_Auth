@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+  
 
   private baseUrl:string = "https://localhost:7114/api/User/"
   constructor(private http: HttpClient,
@@ -36,6 +37,6 @@ export class AuthService {
 
   //If token there return true otherwise false.
   isLoggedIn():boolean{
-    return !!localStorage.getItem('token')
+    return !!localStorage.getItem('token');
   }
 }

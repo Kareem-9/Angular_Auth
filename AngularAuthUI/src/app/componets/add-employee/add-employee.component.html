@@ -1,0 +1,75 @@
+<div class="container allemployee">
+    <mat-card>
+        <div>
+            <h2 style="text-align: center;">Add New Employee Details here ! </h2>
+            <div>
+                <mat-form-field appearance="outline" class="form-elements">
+                    <mat-label>Employee Name</mat-label>
+                    <input matInput placeholder="Employee Name" [(ngModel)]="employeeRecords.name">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" class="form-elements">
+                    <mat-label>Company Name</mat-label>
+                    <input matInput placeholder="Owner" [(ngModel)]="employeeRecords.company">
+                </mat-form-field>
+            </div>        
+            <div>
+                <mat-form-field appearance="outline" class="form-elements">
+                    <mat-label>Mobile</mat-label>
+                    <input matInput placeholder="Mobile" [(ngModel)]="employeeRecords.mobile">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" class="form-elements">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" [(ngModel)]="employeeRecords.email">
+                </mat-form-field>
+            </div>
+            <div>
+
+                <mat-form-field appearance="outline"> 
+                
+               <mat-label>Date of Birth</mat-label>
+                
+                 <input matInput [matDatepicker]="picker" [(ngModel)]="employeeRecords.dateOfBirth">
+                
+                 <mat-hint>MM/DD/YYYY</mat-hint>
+                
+                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                
+                 <mat-datepicker #picker></mat-datepicker>
+                
+                </mat-form-field>
+                
+             </div>
+                
+            <div>
+                
+                 <mat-radio-group aria-label="Select an option" [(ngModel)]="employeeRecords.gender">
+                
+                 <mat-label><b>Gender</b></mat-label>
+                
+                 <mat-radio-button value="male">Male</mat-radio-button>
+                
+                 <mat-radio-button value="female">Female</mat-radio-button>
+                
+                 <mat-radio-button value="others">Others</mat-radio-button>
+                
+                </mat-radio-group>
+                
+            </div>
+            
+            <div>
+                <mat-form-field appearance="outline" class="form-elements">
+                    <mat-label>Location</mat-label>
+                    <input matInput placeholder="Location" [(ngModel)]="employeeRecords.location">
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" type="button" (click)="addRecords()">Add Records</button>
+            </div>
+
+        </div>
+    </mat-card>
+</div>

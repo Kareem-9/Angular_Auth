@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AngularAuthUI';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  
+
+  
+
+
+  // ngOnInit(): void {
+  //   if (localStorage.getItem('login')) {
+  //     this.login = true
+  //   }
+  //   else {
+  //     this.login = false
+  //   }
+  // }
 }
+

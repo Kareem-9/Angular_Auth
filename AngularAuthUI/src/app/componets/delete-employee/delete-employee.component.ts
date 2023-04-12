@@ -12,13 +12,14 @@ export class DeleteEmployeeComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DeleteEmployeeComponent>,
     private rs:ApiService, @Inject(MAT_DIALOG_DATA) public data:any) {}
 
-ngOnInit(): void{
-}
+ngOnInit(): void{}
+
 confirmDelete(){
   this.rs.delete(this.data.id).subscribe(()=>{
-    this.dialogRef.close(this.data.id)
+     this.dialogRef.close(this.data.id)
+    //this.dialogRef.close(true);
+
   })
-  
-}
+  }
 
 }

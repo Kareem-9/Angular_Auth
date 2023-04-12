@@ -16,7 +16,7 @@ import { NgToastService } from 'ng-angular-popup';
 export class DialogComponent implements OnInit {
 
   allEmployees:Iemployee[]= [];
-  displayedColumns: string[] = ['id', 'name', 'company', 'mobile', 'email','dateOfBirth','gender','location','action'];
+  displayedColumns: any[] = ['id', 'name', 'company', 'email', 'mobile','dateOfBirth','gender','salary','location','action'];
   datasource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -55,14 +55,16 @@ export class DialogComponent implements OnInit {
   }
 
   openDeleteModel(id:number){
-   const deleteConfm = this.dialog.open(DeleteEmployeeComponent,{
+   const dialogRef = this.dialog.open(DeleteEmployeeComponent,{
       width: '250px',
-      data:{id}
+      data:{id},
     });
-    deleteConfm.afterClosed().subscribe((result)=>{
-      if(result){
-        this.allEmployees = this.allEmployees.filter((_)=>_.id! = id);
+    dialogRef.afterClosed().subscribe((result)=>{
+     debugger 
+      if(result ){
+        this.allEmployees = this.allEmployees.filter((_)=>_.id != id);
         this.toast.success({ detail: "Success Message", summary: "Employee deleted successfully" })
+
       }
     })
 

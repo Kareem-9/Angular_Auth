@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularAuthAPI", "AngularAuthAPI\AngularAuthAPI.csproj", "{7DE31F45-4DA7-48F1-B863-1CAC3CDB0557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularAuthAPI", "AngularAuthAPI\AngularAuthAPI.csproj", "{7DE31F45-4DA7-48F1-B863-1CAC3CDB0557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperApiSolution.ApplicationService", "DapperApiSolution.ApplicationService\DapperApiSolution.ApplicationService.csproj", "{654DDE44-A42B-4C45-9114-6A91830C62E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperApiSolution.Common", "DapperApiSolution.Common\DapperApiSolution.Common.csproj", "{610B9EAC-E86D-46DF-BDB5-7BC54C776F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperApiSolution.Domain", "DapperApiSolution.Domain\DapperApiSolution.Domain.csproj", "{E84F99CD-4CB5-4147-9AB4-B093B536056C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperApiSolution.Infrastructure", "DapperApiSolution.Infrastructure\DapperApiSolution.Infrastructure.csproj", "{BC047E62-12E8-414D-8B30-43293BF9BC54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{7DE31F45-4DA7-48F1-B863-1CAC3CDB0557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DE31F45-4DA7-48F1-B863-1CAC3CDB0557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DE31F45-4DA7-48F1-B863-1CAC3CDB0557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654DDE44-A42B-4C45-9114-6A91830C62E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654DDE44-A42B-4C45-9114-6A91830C62E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654DDE44-A42B-4C45-9114-6A91830C62E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654DDE44-A42B-4C45-9114-6A91830C62E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610B9EAC-E86D-46DF-BDB5-7BC54C776F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610B9EAC-E86D-46DF-BDB5-7BC54C776F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610B9EAC-E86D-46DF-BDB5-7BC54C776F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610B9EAC-E86D-46DF-BDB5-7BC54C776F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84F99CD-4CB5-4147-9AB4-B093B536056C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84F99CD-4CB5-4147-9AB4-B093B536056C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84F99CD-4CB5-4147-9AB4-B093B536056C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84F99CD-4CB5-4147-9AB4-B093B536056C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC047E62-12E8-414D-8B30-43293BF9BC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC047E62-12E8-414D-8B30-43293BF9BC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC047E62-12E8-414D-8B30-43293BF9BC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC047E62-12E8-414D-8B30-43293BF9BC54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

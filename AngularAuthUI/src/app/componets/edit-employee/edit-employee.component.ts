@@ -14,11 +14,12 @@ export class EditEmployeeComponent implements OnInit {
     id:0,
     name: '',
     company: '',
-    mobile: '',
     email: '',
+    salary:0,
+    mobile: '',
     gender: '',
     location: '',
-    dateOfBirth: '',
+    dateOfBirth: new Date(),
   }
 
   constructor(private rs :ApiService,  private route:ActivatedRoute,

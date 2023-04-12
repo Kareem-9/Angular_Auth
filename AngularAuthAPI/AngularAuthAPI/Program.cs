@@ -1,8 +1,14 @@
 using AngularAuthAPI.Context;
+using DapperApiSolution.ApplicationService.IServices;
+using DapperApiSolution.ApplicationService.Mappings;
+using DapperApiSolution.ApplicationService.Services;
+using DapperApiSolution.Domain.IRepositories;
+using DapperApiSolution.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +18,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddAutoMapper(typeof(AutoMap));
 builder.Services.AddCors(option =>
 {
     option.AddPolicy("MyPolicy", builder =>
@@ -23,7 +32,7 @@ builder.Services.AddCors(option =>
 });
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("sqlServerConnStr"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
 });
 
 builder.Services.AddAuthentication(x =>
@@ -53,7 +62,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseRouting();
 app.UseHttpsRedirection();
 
 app.UseCors("MyPolicy");

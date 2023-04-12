@@ -2,9 +2,10 @@
     id: number,
     name: string,
     company: string,
+    email: string,
     mobile: string,
-    email: string,   
-    dateOfBirth:string,
+    salary:number,   
+    dateOfBirth:Date,
     gender:string,
     location: string,
 }

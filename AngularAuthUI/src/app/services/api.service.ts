@@ -19,24 +19,28 @@ export class ApiService {
 
   //get all records
   getAll():Observable<Iemployee[]>{
-    return this.http.get<Iemployee[]>("http://localhost:3000/Employees");
+    return this.http.get<Iemployee[]>("https://localhost:7114/api/controller/getAll");
   }
   //Add records
   Create(payload:Iemployee):Observable<Iemployee>{
-    return this.http.post<Iemployee>("http://localhost:3000/Employees",payload);
+    return this.http.post<Iemployee>("https://localhost:7114/api/controller/add",payload);
   }
 
   //get records by Id
   getbyId(id:number):Observable<Iemployee>{
-    return this.http.get<Iemployee>(`http://localhost:3000/Employees/${id}` );
+    return this.http.get<Iemployee>(`https://localhost:7114/api/controller/getById/${id}` );
   }
   //Update the Records
   update(payload:Iemployee):Observable<Iemployee>{
-    return this.http.put<Iemployee>(`http://localhost:3000/Employees/${payload.id}`,payload);
+    // return this.http.put<Iemployee>(`https://localhost:7114/api/controller/update/${payload.id}`,payload);
+    return this.http.put<Iemployee>(`https://localhost:7114/api/controller/update/`,payload);
+
   }
 
   //Delete records
   delete(id:number){
-    return this.http.delete(`http://localhost:3000/Employees/${id}`);
+    console.log(id);
+    return this.http.delete(`https://localhost:7114/api/controller/${id}`);
   }
+  
 }

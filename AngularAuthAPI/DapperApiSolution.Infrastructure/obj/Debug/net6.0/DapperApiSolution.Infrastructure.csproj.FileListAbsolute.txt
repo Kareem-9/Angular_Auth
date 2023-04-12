@@ -1,0 +1,15 @@
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\bin\Debug\net6.0\DapperApiSolution.Infrastructure.deps.json
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\bin\Debug\net6.0\DapperApiSolution.Infrastructure.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\bin\Debug\net6.0\DapperApiSolution.Infrastructure.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\bin\Debug\net6.0\DapperApiSolution.Domain.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\bin\Debug\net6.0\DapperApiSolution.Domain.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.csproj.AssemblyReference.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.AssemblyInfoInputs.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.AssemblyInfo.cs
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.csproj.CopyComplete
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\refint\DapperApiSolution.Infrastructure.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\DapperApiSolution.Infrastructure.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Infrastructure\obj\Debug\net6.0\ref\DapperApiSolution.Infrastructure.dll

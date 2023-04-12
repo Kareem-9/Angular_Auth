@@ -1,0 +1,12 @@
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\bin\Debug\net6.0\DapperApiSolution.Domain.deps.json
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\bin\Debug\net6.0\DapperApiSolution.Domain.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\bin\Debug\net6.0\DapperApiSolution.Domain.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.csproj.AssemblyReference.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.AssemblyInfoInputs.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.AssemblyInfo.cs
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.csproj.CoreCompileInputs.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\refint\DapperApiSolution.Domain.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\DapperApiSolution.Domain.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.Domain\obj\Debug\net6.0\ref\DapperApiSolution.Domain.dll

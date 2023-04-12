@@ -15,11 +15,12 @@ employeeRecords:Iemployee ={
   id: 0,
   name: '',
   company: '',
+  salary:0,
   mobile: '',
   email: '',
   gender: '',
   location: '',
-  dateOfBirth: '',
+  dateOfBirth: new Date()
 }
 constructor(private es:ApiService, private router:Router,private toast: NgToastService) {}
 

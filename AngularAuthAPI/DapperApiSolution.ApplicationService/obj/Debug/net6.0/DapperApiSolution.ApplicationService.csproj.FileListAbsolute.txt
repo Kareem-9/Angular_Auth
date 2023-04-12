@@ -1,0 +1,15 @@
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\bin\Debug\net6.0\DapperApiSolution.ApplicationService.deps.json
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\bin\Debug\net6.0\DapperApiSolution.ApplicationService.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\bin\Debug\net6.0\DapperApiSolution.ApplicationService.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\bin\Debug\net6.0\DapperApiSolution.Domain.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\bin\Debug\net6.0\DapperApiSolution.Domain.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.csproj.AssemblyReference.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.AssemblyInfoInputs.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.AssemblyInfo.cs
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.csproj.CoreCompileInputs.cache
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.csproj.CopyComplete
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\refint\DapperApiSolution.ApplicationService.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\DapperApiSolution.ApplicationService.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\DapperApiSolution.ApplicationService\obj\Debug\net6.0\ref\DapperApiSolution.ApplicationService.dll

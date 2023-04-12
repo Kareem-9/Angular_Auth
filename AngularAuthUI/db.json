@@ -49,6 +49,16 @@
       "gender": "male",
       "location": "Gadwal",
       "dateOfBirth": "1992-08-11T18:30:00.000Z"
+    },
+    {
+      "id": 11,
+      "name": "Rohit",
+      "company": "India",
+      "mobile": "7412589630",
+      "email": "rohit@gmail.com",
+      "gender": "male",
+      "location": "Mumbai",
+      "dateOfBirth": "2023-04-14T18:30:00.000Z"
     }
   ]
 }

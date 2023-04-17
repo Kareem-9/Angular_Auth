@@ -36,6 +36,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import { ViewEmployeeComponent } from './componets/view-employee/view-employee.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import {MatSelectModule} from '@angular/material/select';
     EditEmployeeComponent,
     DeleteEmployeeComponent,
     LayoutComponent,
+    ViewEmployeeComponent,
     
   ],
   imports: [

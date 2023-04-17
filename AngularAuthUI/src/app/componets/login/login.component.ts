@@ -5,6 +5,7 @@ import validateForm from 'src/app/helpers/validateform';
 import { AuthService } from 'src/app/services/auth.service';
 import { NgToastService } from 'ng-angular-popup';
 import { AppComponent } from 'src/app/app.component';
+import { DatatriggeringService } from 'src/app/services/datatriggering.service';
 
 @Component({
   selector: 'app-login',
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
      private auth:AuthService,
      private router:Router,
      private toast:NgToastService,
+     private dataTrigger:DatatriggeringService
     // private appcomponent:AppComponent
       ){
     //   localStorage.clear()
@@ -48,12 +50,13 @@ export class LoginComponent implements OnInit {
   onLogin(){
     if(this.loginForm.valid){
       console.log(this.loginForm.value)
+      this.dataTrigger.setuserName(this.loginForm.value.username)      
       // Send the obj to db
       // perform the logic for signup
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res)=>{
-          console.log(res.message);        
+          console.log(res.message);
           this.loginForm.reset();
           this.auth.storeToken(res.token);  //This one is store the token
           this.toast.success({detail:"SUCCESS", summary:res.message,duration:5000});

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { DatatriggeringService } from 'src/app/services/datatriggering.service';
 
 @Component({
   selector: 'app-layout',
@@ -8,18 +9,18 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
- public userName :any
+  userName :any=''
 
-  constructor(private http:HttpClient){
-    this.getUsername();
+  constructor(private http:HttpClient,
+    private dataTrigger:DatatriggeringService){
+    this.getUserName()
   }
 
-  getUsername() {
-    this.http.get<any>("https://localhost:7114/api/User/authenticate").subscribe((user: any) =>{
-      this.userName = user.userName
-    })
+  getUserName(){
+    this.dataTrigger.getUserName().subscribe((data:any)=>{
+      this.userName=data
+   })
   }
-
   isSidenavOpened = false;
 
   toggleSidenav() {

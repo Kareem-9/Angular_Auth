@@ -7,6 +7,7 @@ import { EditEmployeeComponent } from './componets/edit-employee/edit-employee.c
 import { LayoutComponent } from './componets/layout/layout.component';
 import { LoginComponent } from './componets/login/login.component';
 import { SignupComponent } from './componets/signup/signup.component';
+import { ViewEmployeeComponent } from './componets/view-employee/view-employee.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
 
@@ -22,13 +23,15 @@ const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'add-employee',component:AddEmployeeComponent},
  {path:'edit-employee/:id',component:EditEmployeeComponent},
+ {path:'view-employee/:id',component:ViewEmployeeComponent}
  ]},  
 
-  {path:'employee',component:DialogComponent},
+  {path:'employee',component:DialogComponent, canActivate:[AuthGuard] },
   // {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard]}, 
    {path:'add-employee',component:AddEmployeeComponent},
    {path:'edit-employee/:id',component:EditEmployeeComponent},
-
+   {path:'view-employee/:id',component:ViewEmployeeComponent}
+   
    
   
       

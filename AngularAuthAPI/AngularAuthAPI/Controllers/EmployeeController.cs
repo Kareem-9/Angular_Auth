@@ -4,7 +4,7 @@
     using DapperApiSolution.ApplicationService.IServices;
     using Microsoft.AspNetCore.Mvc;
 
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : Controller
     {

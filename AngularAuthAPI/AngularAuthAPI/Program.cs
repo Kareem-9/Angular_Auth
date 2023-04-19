@@ -35,6 +35,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
 });
 
+//50% work 
 builder.Services.AddAuthentication(x =>
 {
     //Schemes
@@ -48,9 +49,10 @@ builder.Services.AddAuthentication(x =>
     x.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryverysceret.....")),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryverysceret.....")), //match your Key,& convert in bytes
         ValidateAudience = false,
         ValidateIssuer = false,
+        //ClockSkew = TimeSpan.Zero,
     };
 });
 

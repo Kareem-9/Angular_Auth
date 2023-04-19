@@ -35,12 +35,12 @@
                 .FirstOrDefaultAsync(x => x.UserName == userobj.UserName);
             if(user == null)
                 return NotFound(new {Message = "User Not Found!"});
-
+            //Cross check for existing user or not!
             if(!PasswordHasher.VerifyPassword(userobj.Password, user.Password))
             {
                 return BadRequest(new { Message = "Password is Incorrect" });
             }
-
+            //create the token store inside user obj
             user.Token = CreateJWT(user);
 
             return Ok(new
@@ -105,7 +105,7 @@
         {
             var jwtTokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes("veryverysceret.....");
-            var identity = new ClaimsIdentity(new Claim[]        //Payload data name & role
+            var identity = new ClaimsIdentity(new Claim[]        //Payload data: name & role
             {
                 new Claim(ClaimTypes.Role,user.Role),
                 new Claim(ClaimTypes.Name,$"{user.FirstName} {user.LastName}")
@@ -117,6 +117,7 @@
             {
                 Subject = identity,
                 Expires = DateTime.Now.AddDays(1),
+                //Expires = DateTime.Now.AddSeconds(10),
                 SigningCredentials = credentials,
             };
 

@@ -29,7 +29,7 @@ export class LayoutComponent {
     this.isSidenavOpened = !this.isSidenavOpened;
   }
 
-  //logout, to use this function %temperory
+  //logout, to use this function Optional
   logout(){
     this.auth.signOut();
   }

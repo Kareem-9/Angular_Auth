@@ -60,7 +60,6 @@ export class DialogComponent implements OnInit {
       data:{id},
     });
     dialogRef.afterClosed().subscribe((result)=>{
-     debugger 
       if(result ){
         this.allEmployees = this.allEmployees.filter((_)=>_.id != id);
         this.toast.success({ detail: "Success Message", summary: "Employee deleted successfully" })

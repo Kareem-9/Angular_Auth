@@ -37,6 +37,6 @@ export class AuthService {
 
   //If token there return true, otherwise false.
   isLoggedIn():boolean{         //string to boolean add !!
-     return !!localStorage.getItem('token');
+     return! localStorage.getItem('token');
   }
 }

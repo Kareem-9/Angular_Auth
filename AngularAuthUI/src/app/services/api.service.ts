@@ -8,12 +8,13 @@ import { Iemployee } from '../iemployee';
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl: string = 'https://localhost:7114/api/User';
+  private baseUrl: string = 'https://localhost:7114/api/User/';
+  setTimer: any;
 
   constructor(private http:HttpClient) { }
 
   
-  getUsers(){
+  getUsers() {
     return this.http.get<any>(this.baseUrl);
   }
 

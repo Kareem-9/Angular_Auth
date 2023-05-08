@@ -26,6 +26,11 @@
                             <div class="form-inline fr mt-4">
                                 <a id="forget" class="font-weight-bold">Forgot Password?</a>
                             </div>
+                            <label for="timerValue">Expire Timer Value:</label>
+                            <div class="input-field" [class.error]="loginForm.controls['TokenExpire'].dirty && loginForm.hasError('required','TokenExpire')"> 
+                                <input type="number" placeholder="tokenExpireTime" formControlName="TokenExpire">
+                             </div>
+
                             <button (click)="onLogin()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Login</button>
                             <div class="text-center pt-4 text-muted">Don't have account? <a id="forget" routerLink="/signup">SignUp</a></div>
                         </form>

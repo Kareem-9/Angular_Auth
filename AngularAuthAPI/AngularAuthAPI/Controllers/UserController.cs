@@ -13,6 +13,10 @@
     using System.Security.Claims;
     using Microsoft.IdentityModel.Tokens;
     using Microsoft.AspNetCore.Authorization;
+    using AngularAuthAPI.Models.Dto;
+    using System.Security.Cryptography;
+
+    //using System.Web.Http;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -24,6 +28,24 @@
         {
             _authContext = appDbContext;
         }
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult> GetAllUsers()
+        {
+            var userDetails = await _authContext.Users.ToListAsync();
+
+            if (userDetails != null)
+            {
+                return Ok(userDetails);
+            }
+            else
+            {
+                return Unauthorized(new { Message = "User is Unathorized" });
+            }
+        }
+
 
        [HttpPost("authenticate")]
        public async Task<IActionResult> Authenticate([FromBody] User userobj)
@@ -40,13 +62,27 @@
             {
                 return BadRequest(new { Message = "Password is Incorrect" });
             }
+            if (userobj.TokenExpire == 0)
+                return BadRequest(new { Message = "token expiry time is Null object" });
+
             //create the token store inside user obj
             user.Token = CreateJWT(user);
-
-            return Ok(new
+            var newAccessToken = user.Token;
+            var newRefreshToken = CreateRefreshToken();
+            user.RefreshToken = newRefreshToken;
+            //user.RefreshTokenExpiryTime = DateTime.Now.AddDays(1);
+            await _authContext.SaveChangesAsync(); //Refreshtoken save in db
+            //if (Token == null)
+            //{
+            //    return BadRequest(new
+            //    {
+            //        Message = "Invalid Token"
+            //    });
+            //}
+            return Ok(new TokenApiDto
             {
-                Token = user.Token,
-                Message = "Login Success!"
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken
             });
        }
         [HttpPost("register")]
@@ -71,13 +107,13 @@
 
             userObj.Password = PasswordHasher.HashPassword(userObj.Password);
             userObj.Role = "user";
-            userObj.Token = "";  
+            //userObj.Token = "";  
             //Add in db
             await _authContext.Users.AddAsync(userObj);
             await _authContext.SaveChangesAsync();
             return Ok(new 
             {
-                Message = "User is Registered!"
+                Message = "User is Registered Successfully !"
             });
 
         }
@@ -108,7 +144,8 @@
             var identity = new ClaimsIdentity(new Claim[]        //Payload data: name & role
             {
                 new Claim(ClaimTypes.Role,user.Role),
-                new Claim(ClaimTypes.Name,$"{user.FirstName} {user.LastName}")
+                //new Claim(ClaimTypes.Name,$"{user.FirstName} {user.LastName}"),
+                new Claim(ClaimTypes.Name,$"{user.UserName}")
             });
 
             var credentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256);
@@ -116,8 +153,8 @@
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = identity,
-                Expires = DateTime.Now.AddDays(1),
-                //Expires = DateTime.Now.AddSeconds(10),
+                //Expires = DateTime.Now.AddDays(1),
+                Expires = DateTime.Now.AddSeconds(user.TokenExpire),
                 SigningCredentials = credentials,
             };
 
@@ -125,11 +162,68 @@
             return jwtTokenHandler.WriteToken(token);
         }
 
-       /* [Authorize]*/
-        [HttpGet]
-        public async Task<ActionResult<User>> GetAllUsers()
+        private string CreateRefreshToken()
         {
-            return Ok(await _authContext.Users.ToListAsync());
+            var randomNumber = new byte[32];
+            using (var rng = System.Security.Cryptography.RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                var refreshToken = Convert.ToBase64String(randomNumber);
+                var tokenInUser = _authContext.Users.Any(a => a.RefreshToken == refreshToken);
+                if (tokenInUser)
+                {
+                    return CreateRefreshToken();
+                }
+                return refreshToken;
+
+            }
+
+        }
+
+        private ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
+        {
+            var key = Encoding.ASCII.GetBytes("veryverysceret.....");
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false, //Validate the audience and issuer depending on your requirement
+                ValidateIssuer = false,
+                ValidateIssuerSigningKey = true, // It's an compulsory it should match the key, otherwise its bad token
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateLifetime = false //We don't care about the token's expiration date based on require it change. 
+            };
+            var tokenHandler = new JwtSecurityTokenHandler();
+            SecurityToken securityToken;
+            var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out securityToken);
+            var jwtSecurityToken = securityToken as JwtSecurityToken;
+            if (jwtSecurityToken == null || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase)) { }
+                throw new SecurityTokenException("Invalid token");
+            return principal;
+        }
+
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh(TokenApiDto tokenApiDto)
+        {
+            if (tokenApiDto is null)
+                return BadRequest("Invalid Client Request");
+            string accessToken = tokenApiDto.AccessToken;
+            string refreshToken = tokenApiDto.RefreshToken;
+            var principal = GetPrincipalFromExpiredToken(accessToken);
+            var username = principal.Identity.Name;
+            var user = await _authContext.Users.FirstOrDefaultAsync(u => u.UserName == username);
+            if (user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+                return BadRequest("Invalid Request");
+            var newAccessToken = CreateJWT(user);
+            if (newAccessToken is null)
+                return BadRequest(new { Message = "token is null" });
+            var newRefreshToken = CreateRefreshToken();
+            user.RefreshToken = newRefreshToken;
+            //await _authContext.SaveChangesAsync();
+            return Ok(new TokenApiDto()
+            {
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken
+            });
+
         }
     }
 }

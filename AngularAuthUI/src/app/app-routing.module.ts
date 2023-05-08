@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'layout', component:LayoutComponent, canActivate:[AuthGuard],
+  {path:'layout', component:LayoutComponent,
 
   children:[
     {path: '',component:DashboardComponent},
@@ -27,9 +27,9 @@ const routes: Routes = [
  ]},  
 
   {path:'employee',component:DialogComponent, canActivate:[AuthGuard] },
-   {path:'add-employee',component:AddEmployeeComponent},
-   {path:'edit-employee/:id',component:EditEmployeeComponent},
-   {path:'view-employee/:id',component:ViewEmployeeComponent}
+  {path:'add-employee',component:AddEmployeeComponent},
+  {path:'edit-employee/:id',component:EditEmployeeComponent},
+  {path:'view-employee/:id',component:ViewEmployeeComponent}
    
    
      

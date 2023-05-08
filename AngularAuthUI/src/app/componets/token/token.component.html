@@ -1,0 +1,11 @@
+<div>
+    <label for="expiration-time">Expiration Time (in seconds):</label>
+    <input type="text" [(ngModel)]="expirationTime" name="expiration-time" id="expiration-time" />
+    <button (click)="setTokenExpiration()">Save</button>
+  </div>
+  
+  <div>
+    <button (click)="startTimer()">Start Timer</button>
+    <button (click)="stopTimer()">Stop Timer</button>
+    <span>{{ expirationTime }}</span>
+  </div>

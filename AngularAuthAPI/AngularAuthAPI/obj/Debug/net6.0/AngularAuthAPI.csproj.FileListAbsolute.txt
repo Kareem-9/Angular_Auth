@@ -101,3 +101,7 @@ D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\
 D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\DapperApiSolution.Domain.pdb
 D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\DapperApiSolution.Infrastructure.dll
 D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\DapperApiSolution.Infrastructure.pdb
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\System.Web.Http.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Angular_Projects\Angular_Auth\AngularAuthAPI\AngularAuthAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

@@ -25,10 +25,11 @@ builder.Services.AddCors(option =>
 {
     option.AddPolicy("MyPolicy", builder =>
     {
-        builder.AllowAnyOrigin()
+        builder.WithOrigins("http://localhost:4200", "https://localhost:4200")
         .AllowAnyMethod()
-        .AllowAnyHeader();
-    });
+        .AllowAnyHeader()
+        .AllowCredentials();
+});
 });
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -52,7 +53,7 @@ builder.Services.AddAuthentication(x =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryverysceret.....")), //match your Key,& convert in bytes
         ValidateAudience = false,
         ValidateIssuer = false,
-        //ClockSkew = TimeSpan.Zero,
+        ClockSkew = TimeSpan.Zero,
     };
 });
 

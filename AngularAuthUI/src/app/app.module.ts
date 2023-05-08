@@ -10,9 +10,6 @@ import { SignupComponent } from './componets/signup/signup.component';
 import { DashboardComponent } from './componets/dashboard/dashboard.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { TokenInterceptor } from './interceptors/token.interceptor';
-import { SideNavComponent } from './layout/side-nav/side-nav.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
 import { MatIconModule } from "@angular/material/icon";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -37,6 +34,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import { ViewEmployeeComponent } from './componets/view-employee/view-employee.component';
+import { TokenComponent } from './componets/token/token.component';
 
 @NgModule({
   declarations: [
@@ -44,16 +42,13 @@ import { ViewEmployeeComponent } from './componets/view-employee/view-employee.c
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    
-    SideNavComponent,
-    HeaderComponent,
-    FooterComponent,
     DialogComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
     DeleteEmployeeComponent,
     LayoutComponent,
     ViewEmployeeComponent,
+    TokenComponent,
     
   ],
   imports: [
